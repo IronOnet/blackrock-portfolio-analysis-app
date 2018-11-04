@@ -2331,15 +2331,15 @@ input, select, textarea {
 			}
 
 		table td {
-			padding: 0.75em 0.75em;
+			padding: 1em 1em;
 		}
 
 		table th {
 			color: #fff;
 			font-size: 0.9em;
 			font-weight: 600;
-			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
+			padding: 0.75em 0.75em 0.75em 0.75em;
+			text-align: center;
 		}
 
 		table thead {
@@ -2904,11 +2904,11 @@ input, select, textarea {
 			}
 
 				.wrapper.style1 table tbody tr:nth-child(2n + 1) {
-					background-color: rgba(255, 255, 255, 0.075);
+					background-color: #fdfdfd;
 				}
 
 			.wrapper.style1 table th {
-				color: #ffffff;
+				color: #772D8B;
 			}
 
 			.wrapper.style1 table thead {
@@ -2994,7 +2994,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style3 header.major p {
-				color: #FDFDFDFD;
+				color: #FDFDFD;
 			}
 
 			.wrapper.style3 label {
@@ -3071,7 +3071,7 @@ input, select, textarea {
 				}
 
 			.wrapper.style3 table th {
-				color: #ffffff;
+				color: #772D8B;
 			}
 
 			.wrapper.style3 table thead {
@@ -3234,7 +3234,7 @@ input, select, textarea {
 				}
 
 			.wrapper.style5 table th {
-				color: #2E3842;
+				color: #772D8B;
 			}
 
 			.wrapper.style5 table thead {

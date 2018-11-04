@@ -21,7 +21,7 @@
 					<section id="banner">
 						<div class="inner">
 							<h2>RockyStocks</h2>
-							<p>Describe.</p>
+							<p>Predict the future of stocks using an algorithm <br> that combines data from neural networks and current news.</p>
 							<ul class="actions special">
 								<li><a href="#two" class="button primary">CalHacks 2018</a></li>
 							</ul>
@@ -35,7 +35,34 @@
 							<header class="major">
 								<h2>Future Performance</h2>
 							</header>
-							<div class = "table">
+							<div class="table-wrapper">
+								<table id = "stocks">
+									<thead>
+										<tr>
+											<th>Index</th>
+											<th>Trend</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>IXM</td>
+											<td>↑</td>
+											<td>$100</td>
+										</tr>
+										<script>
+											x = JSON.parse('{ "index":"John", "trend":30, "city":"New York"}')
+
+											function setUpTable(x) {
+												var tbl = document.getElementById('stocks');
+												var row = tbl.insertRow()
+												var cell1 = row.insertCell()
+												cell1.appendChild(document.createTextNode(x.index))
+											}
+											setUpTable(x)
+										</script>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</section>
@@ -48,29 +75,29 @@
 								<h2>APIs Applied</h2>
 							</header>
 							<ul class="features">
-								<li class="icon fa-paper-plane-o">
-									<h3>Arcu accumsan</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon fa-code">
+									<h3>Blackrock</h3>
+									<p>Augue consectetur sed interdum imperdiet et ipsum.
+										Mauris lorem tincidunt nullam amet leo Aenean ligula
+										consequat consequat.</p>
 								</li>
 								<li class="icon fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+									<h3>News</h3>
+									<p>Augue consectetur sed interdum imperdiet et ipsum.
+										Mauris lorem tincidunt nullam amet leo Aenean ligula
+										consequat consequat.</p>
 								</li>
-								<li class="icon fa-headphones">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon fa-laptop">
+									<h3>Amazon Web Services</h3>
+									<p>Augue consectetur sed interdum imperdiet et ipsum.
+										Mauris lorem tincidunt nullam amet leo Aenean ligula
+										consequat consequat.</p>
 								</li>
-								<li class="icon fa-heart-o">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-flag-o">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon fa-laptop">
+									<h3>MongoDB</h3>
+									<p>Augue consectetur sed interdum imperdiet et ipsum.
+										Mauris lorem tincidunt nullam amet leo Aenean ligula
+										consequat consequat.</p>
 								</li>
 							</ul>
 						</div>
@@ -105,6 +132,24 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				function myFunction() {
+    			var input, filter, ul, li, a, i;
+    			input = document.getElementById("myInput");
+    			filter = input.value.toUpperCase();
+    			ul = document.getElementById("myUL");
+    			li = ul.getElementsByTagName("li");
+    			for (i = 0; i < li.length; i++) {
+        		a = li[i].getElementsByTagName("a")[0];
+        		if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            	li[i].style.display = "";
+        		} else {
+            	li[i].style.display = "none";
+        		}
+    			}
+				}
+			</script>
 
 	</body>
 </html>
