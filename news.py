@@ -34,7 +34,7 @@ dict = {
         'tesla':'TSLA'
 }
 
-def companyCount(time, company):
+def getData(time, company):
     newsapi = NewsApiClient(api_key='69f7c79fd92140f19221a257ec5e980c')
     # companies = list(data['Symbol'])
     countList = []
@@ -44,4 +44,4 @@ def companyCount(time, company):
         countList.append(numArt(time+datetime.timedelta(days= -1*i), company))
         statsList.append(get_stats(dict[company], time_convert(time+(datetime.timedelta(days= -i + 7)))))
     return (countList, statsList)
-print(companyCount(datetime.date.today(), 'google'))
+
