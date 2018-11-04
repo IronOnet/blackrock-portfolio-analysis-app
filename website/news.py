@@ -6,7 +6,7 @@ from stocks import get_stats, time_convert
 # data = pd.read_csv("companylist.csv")
 
 def numArt(time, company):
-    newsapi = NewsApiClient(api_key='69f7c79fd92140f19221a257ec5e980c')
+    newsapi = NewsApiClient(api_key='3abb0cf162644ed9b7ed7d16ae649586')
     articles = newsapi.get_everything(q=company,from_param=str(time),to=str(time))
     return (articles['totalResults'])
     
