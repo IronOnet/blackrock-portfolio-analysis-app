@@ -22,7 +22,9 @@
 						<div class="inner">
 							<h2>RockyStocks</h2>
 							<p>Predict the future of stocks using an algorithm that <br> 
-							combines data from current news using machine learning.</p>
+							combines data from current news using machine learning. <br>
+							Using each day's news, we predict stock trends for any  <br>
+							stock for the next week or more!</p>
 							<ul class="actions special">
 								<li><a href="#two" class="button primary">CalHacks 2018</a></li>
 							</ul>
@@ -42,26 +44,34 @@
 										<tr>
 											<th>Index</th>
 											<th>Predicted Trend</th>
-											<th>Price</th>
+											<th>Deviation</th>
+											<th>  </th>
 										</tr>
 									</thead>
 									<tbody>
+										{% for post in posts %}
 										<tr>
-											<td>IXM</td>
+											<td>{{post.name}}</td>
+											{% if (post.trend == -1) or (post.trend == 1) %}
+											{% if (post.trend == 1)%}
 											<td>↑</td>
-											<td>$100</td>
-										</tr>
-										<script>
-											x = JSON.parse('{ "index":"John", "trend":30, "city":"New York"}')
+											<td>~0</td>
+											<td>SAFE</td>
+											{% else %}
+											<td>↓</td>
+											<td>~0</td>
+											<td>SAFE</td>
+											{% endif %}
 
-											function setUpTable(x) {
-												var tbl = document.getElementById('stocks');
-												var row = tbl.insertRow()
-												var cell1 = row.insertCell()
-												cell1.appendChild(document.createTextNode(x.index))
-											}
-											setUpTable(x)
-										</script>
+											{% else %}
+											<td>-</td>
+											<td>{{post.trend}}</td>
+											<td>UNSAFE</td>
+											{% endif %}
+
+											
+										</tr>
+										{% endfor %}
 									</tbody>
 								</table>
 							</div>
@@ -78,27 +88,26 @@
 							<ul class="features">
 								<li class="icon fa-code">
 									<h3>Blackrock</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum.
-										Mauris lorem tincidunt nullam amet leo Aenean ligula
-										consequat consequat.</p>
+									<p>The Blackrock Alladin API provided with stock data
+										that allowed us to view trends in the data on a daily,
+										weekly, and monthly basis.</p>
 								</li>
-								<li class="icon fa-code">
+								<li class="icon fa-newspaper">
 									<h3>News</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum.
-										Mauris lorem tincidunt nullam amet leo Aenean ligula
-										consequat consequat.</p>
+									<p>We used an open-source API that allowed us to view a
+										large collection of articles and sort and search by
+										keywords.</p>
+								</li>
+								<li class="icon fa-flask">
+									<h3>Flask</h3>
+									<p>Our website uses Flask as our server in the development
+										of this website.</p>
 								</li>
 								<li class="icon fa-laptop">
-									<h3>Amazon Web Services</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum.
-										Mauris lorem tincidunt nullam amet leo Aenean ligula
-										consequat consequat.</p>
-								</li>
-								<li class="icon fa-laptop">
-									<h3>MongoDB</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum.
-										Mauris lorem tincidunt nullam amet leo Aenean ligula
-										consequat consequat.</p>
+									<h3>Python/CSS/JS</h3>
+									<p>Python was used for all data handling and calculation,
+										as well as the backend streams on this website. JavaScript
+										was used for integration with the CSS/HTML frontend.</p>
 								</li>
 							</ul>
 						</div>

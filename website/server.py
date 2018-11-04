@@ -1,13 +1,31 @@
 from flask import Flask, request, url_for, render_template
-#from training import up_or_down
+from training import up_or_down
 
 
 app = Flask(__name__)
 
-#mat = up_or_down('google')
-#a = {'google':mat}
+companies = [
+        'google',
+        'apple',
+        'applied materials',
+        'adobe',
+        'amazon',
+        'cisco',
+        'citrix',
+        'expedia',
+        'facebook',
+        'intel',
+        'microsoft',
+        'netflix',
+        'nvidia',
+        'paypal',
+        'qualcomm',
+        'starbucks',
+        ]
 
-posts = [{'hello': 'world'}]
+posts = []
+for company in companies:
+	posts.append({'name': company, 'trend' : up_or_down(company)})
 
 @app.route('/')
 @app.route('/home')
