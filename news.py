@@ -1,6 +1,5 @@
 from newsapi import NewsApiClient
-from datetime import timedelta
-from datetime import date
+import datetime
 from stocks import get_stats, time_convert
 
 # import pandas as pd
@@ -37,14 +36,14 @@ dict = {
 def getCount(time, company):
     newsapi = NewsApiClient(api_key='69f7c79fd92140f19221a257ec5e980c')
     # companies = list(data['Symbol'])'
-    return numArt(time+datetime.timedelta(days= -1*i), company)
+    return numArt(time, company)
 
 def getData(time, company):
     countList = []
     statsList = []
     count = 0
     for i in range(18, 30, 1):
-        countList.append(getCount(time, company))
+        countList.append(getCount(time+datetime.timedelta(days= -1*i), company))
         statsList.append(get_stats(dict[company], time_convert(time+(datetime.timedelta(days= -i + 7)))))
     return (countList, statsList)
 

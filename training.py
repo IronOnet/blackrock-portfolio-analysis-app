@@ -31,9 +31,7 @@ print(predict(20))
 """
 import requests
 import json
-from newsapi import NewsApiClient
-from datetime import timedelta
-from datetime import date
+import datetime
 import stocks
 import news
 
@@ -42,7 +40,7 @@ data = news.getData(datetime.date.today(), 'google')
 mean_count = sum(data[0])/len(data[0])
 
 i = 0
-while not data[1][i] < mean:
+while not data[1][i] < mean_count:
 	i += 1
 tendency = data[0][i]
 
