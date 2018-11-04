@@ -32,7 +32,7 @@ print(predict(20))
 import stocks
 import news
 
-data = news.companyCount(datetime.date.today(), 'google')
+data = news.getData(datetime.date.today(), 'google')
 
 mean_count = sum(data[0])/len(data[0])
 
