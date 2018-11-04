@@ -29,6 +29,11 @@ def predict(num):
 
 print(predict(20))
 """
+import requests
+import json
+from newsapi import NewsApiClient
+from datetime import timedelta
+from datetime import date
 import stocks
 import news
 

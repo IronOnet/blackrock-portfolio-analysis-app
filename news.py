@@ -1,6 +1,6 @@
 from newsapi import NewsApiClient
-import datetime
 from datetime import timedelta
+from datetime import date
 from stocks import get_stats, time_convert
 
 # import pandas as pd
