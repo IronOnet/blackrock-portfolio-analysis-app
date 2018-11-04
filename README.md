@@ -1,2 +1,3 @@
 # blackrock-portfolio-analysis-app
-UTILIZES BLACKROCK'S ALLADIN API TO PROCESS FINANCIAL DATA AND THE NEWS API TO PROCESS TRENDS IN NEWS IN COUNTRY TO PREDICT CHANGES IN STOCK PERFORMANCE DUE TO GLOBAL NEWS PUBLICATIONS.
+Utilizes Blackrock's Aladdin API to process finanacial data and the News API to process trends in news in country to predict changes in stock performance due to global news publications.
+
