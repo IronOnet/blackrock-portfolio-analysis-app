@@ -34,4 +34,20 @@ import news
 
 data = news.companyCount(datetime.date.today(), 'google')
 
-for element in data[1]:
+mean_count = sum(data[0])/len(data[0])
+
+i = 0
+while not data[1][i] < mean:
+	i += 1
+tendency = data[0][i]
+
+def up_or_down(time, company):
+	count = getCount(time, company)
+	if count < mean_count:
+		if tendency < 0:
+			return -1
+		return 1
+	else:
+		return (count - mean_count) / mean_count
+
+
