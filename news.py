@@ -1,7 +1,7 @@
 from newsapi import NewsApiClient
 import datetime
 from datetime import timedelta
-from data import get_stats, time_convert
+from stocks import get_stats, time_convert
 
 # import pandas as pd
 # data = pd.read_csv("companylist.csv")
