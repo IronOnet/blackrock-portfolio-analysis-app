@@ -10,9 +10,6 @@ def numArt (time, company):
     newsapi = NewsApiClient(api_key='69f7c79fd92140f19221a257ec5e980c')
     articles = newsapi.get_everything(q=company,from_param=str(time),to=str(time))
     return (articles['totalResults'])
- 
-
-
 
 def companyCount(time, company):
     newsapi = NewsApiClient(api_key='69f7c79fd92140f19221a257ec5e980c')
