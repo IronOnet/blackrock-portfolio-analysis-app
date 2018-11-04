@@ -1,3 +1,4 @@
+"""
 import keras
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Conv2D, MaxPool2D, Flatten
@@ -7,7 +8,7 @@ import numpy as np
 batch_size = 7
 epochs = 5
 
-x_train, y_train = [600, 20, 80, 400, 456, 34, 46], [-0.127, 0.038, 0.047, -0.070, -0.100, 0.024, 0.046]
+x_train, y_train = data input
 y_vals = y_train
 
 y_train = keras.utils.to_categorical(y_train, len(y_train))
@@ -27,3 +28,5 @@ def predict(num):
 	return y_vals[np.argmax(np.round(model.predict([num]), 3))]
 
 print(predict(20))
+"""
+

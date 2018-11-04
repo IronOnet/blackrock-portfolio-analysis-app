@@ -10,8 +10,7 @@ def numArt(time, company):
     newsapi = NewsApiClient(api_key='69f7c79fd92140f19221a257ec5e980c')
     articles = newsapi.get_everything(q=company,from_param=str(time),to=str(time))
     return (articles['totalResults'])
-<<<<<<< HEAD
-
+    
 dict = {
         'google':'GOOGL',
         'apple':'AAPL',
@@ -34,9 +33,6 @@ dict = {
         'starbucks':'SBUX',
         'tesla':'TSLA'
 }
-
-=======
->>>>>>> aeaa6a168fb8b11e1af6d87d16d153ca324cbeab
 
 def companyCount(time, company):
     newsapi = NewsApiClient(api_key='69f7c79fd92140f19221a257ec5e980c')
