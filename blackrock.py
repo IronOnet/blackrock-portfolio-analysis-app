@@ -6,12 +6,7 @@ from data import get_stats, time_convert
 # import pandas as pd
 # data = pd.read_csv("companylist.csv")
 
-<<<<<<< HEAD
-def numArt (time, company):
-    company = "Google"
-=======
 def numArt(time, company):
->>>>>>> 075de9912ee331cef0fc714d22bea15460c49163
     newsapi = NewsApiClient(api_key='69f7c79fd92140f19221a257ec5e980c')
     articles = newsapi.get_everything(q=company,from_param=str(time),to=str(time))
     return (articles['totalResults'])
