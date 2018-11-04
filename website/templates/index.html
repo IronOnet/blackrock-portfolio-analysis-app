@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>RockyStocks| Stock Market Predictor</title>
+		<title>RockyStocks | Stock Market Predictor</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" type="text/css"  href="{{url_for('static', filename = 'main.css')}}" />
+		<noscript><link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'noscript.css')}}" /></noscript>
 	</head>
 	<body class="landing is-preload">
 
@@ -21,7 +21,8 @@
 					<section id="banner">
 						<div class="inner">
 							<h2>RockyStocks</h2>
-							<p>Predict the future of stocks using an algorithm <br> that combines data from neural networks and current news.</p>
+							<p>Predict the future of stocks using an algorithm that <br> 
+							combines data from current news using machine learning.</p>
 							<ul class="actions special">
 								<li><a href="#two" class="button primary">CalHacks 2018</a></li>
 							</ul>
@@ -125,13 +126,13 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+			<script type="text/javascript" src="{{ url_for('static', filename='jquery.scrollex.min.js') }}"></script>
+			<script type="text/javascript" src="{{ url_for('static', filename='jquery.scrolly.min.js') }}"></script>
+			<script type="text/javascript" src="{{ url_for('static', filename='browser.min.js') }}"></script>
+			<script type="text/javascript" src="{{ url_for('static', filename='breakpoints.min.js') }}"></script>
+			<script type="text/javascript" src="{{ url_for('static', filename='util.js') }}"></script>
+			<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
 
 
 	</body>
