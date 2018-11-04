@@ -44,7 +44,7 @@ while not float(data[0][i]) < mean_count:
 	i += 1
 tendency = float(data[1][i])
 
-def up_or_down(company, time=datetime.date.today()):
+def up_or_down(company, time=datetime.date.today()-datetime.timedelta(days=10)):
 	count = news.getCount(time, company)
 	if count < mean_count:
 		if tendency < 0:
