@@ -8,13 +8,8 @@ from datetime import date
 def one_day_stats (company, date):
 
 	portfolioAnalysisRequest = requests.get("https://www.blackrock.com/tools/hackathon/performance", params= {'identifiers': company, 'startDate' : date, 'endDate' : date})
-	
 	dic_data = json.loads(portfolioAnalysisRequest.text) # string json 
-	
 	b = dic_data['resultMap']['RETURNS'][0] # enter data for the 
-
-	
-
 	return b.get("latestPerf")['oneDay']
 
 
